@@ -10,6 +10,11 @@
         <variable
             name="person"
             type="com.example.mydatabinding.model.Person" />
+
+        <variable
+            name="presenter"
+            type="com.example.mydatabinding.activity.Demo1Activity.Presenter" />
+
     </data>
 
     <LinearLayout
@@ -18,11 +23,27 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:hint="请输入姓名"
+            android:onTextChanged="@{presenter.onTextChanged}" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:hint="请输入年纪" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="5dp"
             android:gravity="center"
+            android:onClick="@{presenter.onClick}"
             android:text="@{user.firstName}" />
 
         <!-- 布局文件中的表达式使用 “@{}” 的语法 -->
@@ -31,6 +52,7 @@
             android:layout_height="45dp"
             android:layout_margin="5dp"
             android:gravity="center"
+            android:onLongClick="@{presenter.onLongClick}"
             android:text="@{user.lastName}" />
 
         <TextView
@@ -38,6 +60,7 @@
             android:layout_height="45dp"
             android:layout_margin="5dp"
             android:gravity="center"
+            android:onClick="@{()->presenter.onClickListenerBinding(user)}"
             android:text="@{person.name}" />
 
         <TextView

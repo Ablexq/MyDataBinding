@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mydatabinding.activity.Demo1Activity;
+import com.example.mydatabinding.activity.Demo2Activity;
+import com.example.mydatabinding.activity.Demo3Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
@@ -38,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Demo1Activity.class));
                 break;
             case R.id.btn2:
+                startActivity(new Intent(MainActivity.this, Demo2Activity.class));
                 break;
             case R.id.btn3:
+                startActivity(new Intent(MainActivity.this, Demo3Activity.class));
                 break;
             case R.id.btn4:
                 break;

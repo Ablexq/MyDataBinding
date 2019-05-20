@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
@@ -15,13 +16,16 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_margin="5dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:text="@{String.valueOf((1+2))}" />
 
         <TextView
             android:id="@+id/tv2"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_margin="5dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:text="@{String.valueOf(1>2?5:10)}" />
+
     </LinearLayout>
 </layout>
