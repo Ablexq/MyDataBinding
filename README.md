@@ -12,6 +12,8 @@
 
 [Android Data Binding 系列(二) -- Binding与Observer实现原理](http://connorlin.github.io/2016/07/13/Android-Data-Binding-%E7%B3%BB%E5%88%97-%E4%BA%8C-Binding%E4%B8%8EObserver%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/)
 
+[databinding文章汇总](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0811/3290.html)
+
 # 开启dataBinding功能：
 
 ``` 
