@@ -17,6 +17,7 @@ public class Demo2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityDemo2Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_demo2);
+        //带 ID 的 View
         binding.tv1.setText(user.getFirstName());
         binding.tv2.setText(user.getLastName());
     }
