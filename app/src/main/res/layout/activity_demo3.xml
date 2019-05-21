@@ -3,6 +3,26 @@
 
     <data>
 
+
+        <import
+            alias="ModelUser"
+            type="com.example.mydatabinding.model.User" />
+
+        <!-- alias 别名的使用 -->
+
+        <import
+            alias="Model1User"
+            type="com.example.mydatabinding.model1.User" />
+
+        <variable
+            name="user"
+            type="ModelUser" />
+
+        <variable
+            name="user1"
+            type="Model1User" />
+
+
     </data>
 
     <LinearLayout
@@ -16,16 +36,71 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_margin="5dp"
+            android:background="@{(1 &lt; 10)?@color/colorPrimary:@color/colorAccent}"
             android:gravity="center"
-            android:text="@{String.valueOf((1+2))}" />
+            android:text="@{String.valueOf((1+2))}"
+            android:textColor="@{(1 &lt; 10)?@color/orange:@color/green}"
+            android:textSize="@{(1 &lt; 10)?(int)@dimen/sp_16:(int)@dimen/sp_25}" />
 
         <TextView
             android:id="@+id/tv2"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_margin="5dp"
+            android:background="@{(1>10)?@color/colorPrimary:@color/colorAccent}"
             android:gravity="center"
-            android:text="@{String.valueOf(1>2?5:10)}" />
+            android:text="@{String.valueOf(1>10?5:10)}"
+            android:textColor="@{(1>10)?@color/orange:@color/green}"
+            android:textSize="@{(1>10)?(int)@dimen/sp_16:(int)@dimen/sp_25}" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#ff0000" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@{user.lastName}" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@{user1.lastName}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#ff0000" />
+
+        <!-- Null Coalescing 运算符 -->
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@{user.firstName ?? user.lastName}" />
+
+        <!-- 等价于 -->
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@{user.firstName != null ? user.firstName : user.lastName}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#ff0000" />
     </LinearLayout>
 </layout>

@@ -125,7 +125,15 @@ compile
 api 或 implementation
 ```
 
+# 错误
 
-
+``` 
+与元素类型 "TextView" 相关联的 "android:background" 属性值不能包含 '<' 字符。
+```
+``` 
+< 
+用以下替换：
+&lt; 
+```
 
 

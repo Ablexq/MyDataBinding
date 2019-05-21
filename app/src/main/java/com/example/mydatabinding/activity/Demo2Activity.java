@@ -15,7 +15,6 @@ public class Demo2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo2);
 
         ActivityDemo2Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_demo2);
         binding.tv1.setText(user.getFirstName());

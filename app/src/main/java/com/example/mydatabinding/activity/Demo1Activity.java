@@ -17,12 +17,11 @@ import androidx.databinding.DataBindingUtil;
 public class Demo1Activity extends AppCompatActivity {
     private ActivityDemo1Binding binding;
     private User user = new User("xq", "666");
-    private Person person = new Person("xq", 18);
+    private Person person = new Person("jack_ma", 18);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo1);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_demo1);
 

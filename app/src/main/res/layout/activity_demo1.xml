@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <!-- 变量user， 描述了一个布局中会用到的属性 -->
+
+        <import type="com.example.mydatabinding.util.MyStringUtils" />
+
         <variable
             name="user"
             type="com.example.mydatabinding.model.User" />
@@ -14,6 +16,7 @@
         <variable
             name="presenter"
             type="com.example.mydatabinding.activity.Demo1Activity.Presenter" />
+
 
     </data>
 
@@ -61,7 +64,7 @@
             android:layout_margin="5dp"
             android:gravity="center"
             android:onClick="@{()->presenter.onClickListenerBinding(user)}"
-            android:text="@{person.name}" />
+            android:text="@{MyStringUtils.capitalize(person.name)}" />
 
         <TextView
             android:layout_width="match_parent"
